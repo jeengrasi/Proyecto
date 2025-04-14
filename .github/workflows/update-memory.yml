@@ -1,0 +1,27 @@
+name: Actualizar Memoria del Proyecto
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  update-memory:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout del repositorio
+      uses: actions/checkout@v3
+
+    - name: Configurar Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+    - name: Actualizar memoria
+      run: |
+        echo "## 🕒 Historial de Cambios" > docs/memoria_proyecto.md
+        echo "- **$(date '+%Y-%m-%d %H:%M:%S')**: Último commit: $(git log -1 --pretty=format:'%h - %s (%ci)')" >> docs/memoria_proyecto.md
+        git add docs/memoria_proyecto.md
+        git commit -m "Actualización automática de memoria"
+        git push origin main
