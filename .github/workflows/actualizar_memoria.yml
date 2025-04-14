@@ -1,29 +1,25 @@
-name: Sync with GitHub and Backup
+  name: Sync with GitHub and Backup
 
 on:
   push:
     branches:
       - main
-  schedule:
-    - cron: "0 0 * * *" # Ejecutar diariamente
 
 jobs:
-  sync:
+  sync-with-backup:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Code
-        uses: actions/checkout@v3
+    - name: Checkout del código
+      uses: actions/checkout@v3
 
-      - name: Sync with Rclone
-        env:
-          RCLONE_CONFIG: ${{ secrets.RCLONE_CONFIG }}
-        run: |
-          rclone sync ./db remote:Proyecto/db --backup-dir remote:Proyecto/backup/$(date +'%Y%m%d')
+    - name: Instalar rclone
+      run: |
+        sudo apt-get update
+        sudo apt-get install -y rclone
 
-      - name: Push Changes to GitHub
-        run: |
-          git config user.name "GitHub Actions"
-          git config user.email "actions@github.com"
-          git add -A
-          git commit -m "Automated backup and sync"
-          git push
+    - name: Configurar y sincronizar con rclone
+      env:
+        RCLONE_CONFIG: ${{ secrets.RCLONE_CONFIG }}
+      run: |
+        rclone sync ./docs remote:Proyecto/backup
