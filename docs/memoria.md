@@ -3,6 +3,8 @@
 ## Introducción
 Este documento describe el desarrollo y evolución del **Sistema Autónomo de Generación de Dinero**. Incluye detalles técnicos, decisiones de diseño y resultados obtenidos.
 
+......
+
 ## Objetivos del Proyecto
 - Automatizar procesos para generar ingresos.
 - Crear una infraestructura escalable y robusta.
