@@ -1,0 +1,50 @@
+from flask import Flask, render_template, request, redirect, url_for
+import sqlite3
+
+app = Flask(__name__)
+
+# Ruta principal
+@app.route("/")
+def home():
+    return render_template("index.html")
+
+# Ruta de contacto
+@app.route("/contacto", methods=["GET", "POST"])
+def contacto():
+    if request.method == "POST":
+        nombre = request.form.get("nombre")
+        mensaje = request.form.get("mensaje")
+
+        # Guardar los datos en la base de datos
+        try:
+            conn = sqlite3.connect('contactos.db')
+            cursor = conn.cursor()
+            cursor.execute("INSERT INTO mensajes (nombre, mensaje) VALUES (?, ?)", (nombre, mensaje))
+            conn.commit()
+        except Exception as e:
+            print(f"Error al guardar en la base de datos: {e}")
+        finally:
+            conn.close()
+
+        # Redirigir al inicio después de enviar el formulario
+        return redirect(url_for("home"))
+    return render_template("contacto.html")
+
+# Ruta para ver los mensajes guardados
+@app.route("/mensajes")
+def mensajes():
+    try:
+        conn = sqlite3.connect('contactos.db')
+        cursor = conn.cursor()
+        cursor.execute("SELECT id, nombre, mensaje FROM mensajes")
+        mensajes = cursor.fetchall()
+    except Exception as e:
+        print(f"Error al recuperar los mensajes: {e}")
+        mensajes = []
+    finally:
+        conn.close()
+
+    return render_template("mensajes.html", mensajes=mensajes)
+
+if __name__ == "__main__":
+    app.run(debug=True)
