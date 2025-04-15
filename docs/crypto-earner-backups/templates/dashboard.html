@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Earner Dashboard</title>
+</head>
+<body>
+    <h1>Crypto Earner Dashboard</h1>
+    <h2>Faucets</h2>
+    <ul>
+        {% for log in faucet_log %}
+        <li>{{ log }}</li>
+        {% endfor %}
+    </ul>
+    <h2>Opportunities</h2>
+    <table border="1">
+        <tr>
+            {% for col in opportunities.columns %}
+            <th>{{ col }}</th>
+            {% endfor %}
+        </tr>
+        {% for row in opportunities.values %}
+        <tr>
+            {% for val in row %}
+            <td>{{ val }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

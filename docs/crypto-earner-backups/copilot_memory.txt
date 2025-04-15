@@ -1,0 +1,42 @@
+Fecha: 2025-04-08  
+**Proyecto:** Crypto Earner  
+**Propósito:** Generación de ganancias reales a través de análisis de criptomonedas y estrategias automatizadas.
+
+---
+
+### **Pasos completados**
+
+**Paso 1: Configuración avanzada**  
+- Script `analysis.py` actualizado para identificar oportunidades de inversión en tiempo real.  
+- Flujo ajustado en `main.py` para enviar resultados a Telegram.
+
+**Resultados recientes:**  
+- Archivo `crypto_opportunities.csv` generado con oportunidades significativas (>5% incremento).  
+- Notificación enviada correctamente al bot de Telegram.
+
+---
+
+### **Próximos pasos**
+1. Configurar operaciones automatizadas (compra/venta) basadas en resultados.
+2. Registrar ganancias reales y estrategias en un archivo dedicado.
+
+Fecha: 2025-04-08 22:36:38
+Análisis avanzado ejecutado; archivo /home/jeengrasi/crypto-earner/data/crypto_opportunities.csv generado y respaldado.
+
+Fecha: 2025-04-08 22:41:02
+Análisis avanzado ejecutado; archivo /home/jeengrasi/crypto-earner/data/crypto_opportunities.csv generado y respaldado; gráfico /home/jeengrasi/crypto-earner/data/crypto_graph.png creado.
+
+Fecha: 2025-04-08 22:54:00
+Análisis avanzado realizado; archivo /home/jeengrasi/crypto-earner/data/crypto_opportunities.csv generado; gráfico /home/jeengrasi/crypto-earner/data/crypto_graph.png creado.
+
+Fecha: 2025-04-08 23:09:17
+Análisis avanzado realizado; archivo /home/jeengrasi/crypto-earner/data/crypto_opportunities.csv generado; gráfico /home/jeengrasi/crypto-earner/data/crypto_graph.png creado; faucets ejecutados.
+
+Fecha: 2025-04-08 23:20:36
+Análisis completado; archivo /home/jeengrasi/crypto-earner/data/crypto_opportunities.csv generado; gráfico /home/jeengrasi/crypto-earner/data/crypto_graph.png creado; faucets ejecutados.
+
+Fecha: 2025-04-09 21:42:25
+Análisis completado; archivo /home/jeengrasi/crypto-earner/data/crypto_opportunities.csv generado; gráfico /home/jeengrasi/crypto-earner/data/crypto_graph.png creado; faucets ejecutados.
+
+Fecha: 2025-04-09 22:52:07
+Análisis completado; archivo /home/jeengrasi/crypto-earner/data/crypto_opportunities.csv generado; gráfico /home/jeengrasi/crypto-earner/data/crypto_graph.png creado; faucets ejecutados.
