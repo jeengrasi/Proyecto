@@ -1,2 +1,2 @@
 ## 🕒 Historial de Cambios
-- **2025-04-15 01:11:07**: Último commit: b19aab7 - Resolviendo conflicto en memoria_proyecto.md y actualizando contenido (2025-04-14 21:10:45 -0400)
+- **2025-04-15 02:10:47**: Último commit: 91db50e - Añadiendo las guías GUIA_Flask.md y FLUJO_DE_TRABAJO.md (2025-04-14 22:10:30 -0400)
