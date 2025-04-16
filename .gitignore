@@ -1,0 +1,12 @@
+# Archivos y carpetas a ignorar
+venv/
+*.db
+
+# Ignorar logs y backups
+*.log
+*.zip
+
+# Ignorar archivos compilados de Python
+__pycache__/
+*.pyc
+*.pyo
