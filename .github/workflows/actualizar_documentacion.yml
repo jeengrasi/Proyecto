@@ -1,0 +1,20 @@
+name: Actualizar Documentación del Proyecto
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  generar-documento:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+
+      - name: Ejecutar script de documentación
+        run: |
+          python scripts/generar_documento.py
+          git add documento_proyecto.md
+          git commit -m "🔄 Actualización automática de documentación"
+          git push origin main
