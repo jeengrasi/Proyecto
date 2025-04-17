@@ -1,0 +1,24 @@
+name: Sincronización Automática del Documento Maestro
+
+on:
+  push:
+    paths:
+      - 'sistema_autonomo_info.txt'
+    branches:
+      - main
+
+jobs:
+  sincronizar_drive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout del código
+        uses: actions/checkout@v3
+
+      - name: Configurar Rclone
+        run: |
+          curl https://rclone.org/install.sh | sudo bash
+          rclone config create proyecto drive scope=drive
+
+      - name: Subir documento a Google Drive
+        run: |
+          rclone copy sistema_autonomo_info.txt proyecto:Proyecto/
