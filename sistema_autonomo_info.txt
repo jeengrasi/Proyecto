@@ -1,0 +1,12 @@
+█████████████████████████████████████████████████████
+🌐 **SISTEMA AUTÓNOMO - DOCUMENTACIÓN COMPLETA** 🌐  
+█████████████████████████████████████████████████████  
+
+📌 **Entorno de trabajo:** iPad vía SSH  
+📌 **Sincronización con:** GitHub + Google Drive  
+📌 **Objetivo:** Autonomía total con continuidad del historial  
+
+🚀 **1️⃣ CREACIÓN Y GESTIÓN DEL DOCUMENTO MAESTRO**  
+✅ **Cómo crear el documento en tu servidor**  
+```bash
+nano sistema_autonomo_info.txt
