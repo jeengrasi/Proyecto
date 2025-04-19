@@ -1,2 +1,2 @@
 ## 🕒 Historial de Cambios
-- **2025-04-19 19:23:38**: Último commit: 2570b3d - Merge branch 'main' of github.com:jeengrasi/Proyecto (2025-04-19 15:21:08 -0400)
+- **2025-04-19 20:12:51**: Último commit: 1ac94c5 - Añadir archivo MEMORIA_DEL_PROYECTO.md para documentar el proyecto (2025-04-19 16:12:31 -0400)
