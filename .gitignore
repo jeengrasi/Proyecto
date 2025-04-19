@@ -1,12 +1,23 @@
-# Archivos y carpetas a ignorar
-venv/
-*.db
+# Archivos de sistema
+.DS_Store
+Thumbs.db
 
-# Ignorar logs y backups
+# Archivos de logs
+logs/
 *.log
-*.zip
 
-# Ignorar archivos compilados de Python
-__pycache__/
+# Bases de datos y backups
+db/*.db
+db/backups/
+
+# Archivos de sincronización y temporales
+*.tmp
+*.swp
+*.bak
+
+# Archivos de Python
 *.pyc
-*.pyo
+__pycache__/
+
+# Configuraciones locales
+.env
