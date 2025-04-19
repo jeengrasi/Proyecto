@@ -1,0 +1,15 @@
+0 * * * * rclone copy ~/Proyecto/documento_proyecto.md proyecto:/Proyecto/
+*/10 * * * * python3 /home/jeengrasi/auto_trading/scripts/reemplazar_scripts.py
+0 2 * * * python3 /home/jeengrasi/auto_trading/scripts/sincronizar_y_notificar.py
+0 3 * * 0 /ruta/al/archivo/limpieza.sh
+0 * * * * /usr/bin/python3 /home/jeengrasi/update_folders.py
+30 * * * * /usr/bin/python3 /home/jeengrasi/generate_html_report.py
+0 2 * * * /usr/bin/python3 /home/jeengrasi/backup_database.py
+*/5 * * * * /usr/bin/python3 /home/jeengrasi/get_crypto_prices.py
+0 8 * * * /usr/bin/python3 /home/jeengrasi/auto_trading/scripts/data_collector.py
+0 3 * * * python3 /home/jeengrasi/auto_trading/scripts/send_to_telegram.py
+0 2 * * * rclone sync /home/jeengrasi/auto_trading/documentation proyecto:/auto_trading_backup/documentation
+0 3 * * * rclone sync /home/jeengrasi/auto_trading/db proyecto:/auto_trading_backup/db
+0 4 * * * rclone sync /home/jeengrasi/auto_trading/scripts proyecto:/auto_trading_backup/scripts
+
+0 3 * * * rclone sync /home/jeengrasi/auto_trading/db proyecto:/auto_trading_backup/db
